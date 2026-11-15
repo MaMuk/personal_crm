@@ -1,0 +1,1591 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* personal_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-15 16:00+0000\n"
+"PO-Revision-Date: 2026-11-15 16:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "%s as %s to %s as %s"
+msgstr "%s als %s zu %s als %s"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "%s contacts · %s relationship records"
+msgstr "%s Kontakte · %s Beziehungseinträge"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "%s relationship added."
+msgstr "%s Beziehung hinzugefügt."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "%s relationships"
+msgstr "%s Beziehungen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "%s relationships added."
+msgstr "%s Beziehungen hinzugefügt."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "%s relationships between %s and %s"
+msgstr "%s Beziehungen zwischen %s und %s"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "1 relationship"
+msgstr "1 Beziehung"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.person_form
+msgid "<span class=\"o_stat_text\">Network</span>"
+msgstr "<span class=\"o_stat_text\">Netzwerk</span>"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "A selected contact or relationship type is inaccessible."
+msgstr "Ein ausgewählter Kontakt oder Beziehungstyp ist nicht zugänglich."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid ""
+"A selected contact or relationship type is unavailable or inaccessible."
+msgstr ""
+"Ein ausgewählter Kontakt oder Beziehungstyp ist nicht verfügbar oder nicht "
+"zugänglich."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "A selected contact or relationship type is unavailable."
+msgstr "Ein ausgewählter Kontakt oder Beziehungstyp ist nicht verfügbar."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Add %s relationship"
+msgstr "%s Beziehung hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Add %s relationships"
+msgstr "%s Beziehungen hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Add contacts"
+msgstr "Kontakte hinzufügen"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+msgid "Add note"
+msgstr "Notiz hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Add relationship"
+msgstr "Beziehung hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Add relationship from %s"
+msgstr "Beziehung von %s hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.actions.client,name:personal_crm.action_add_relationships
+#: model:ir.ui.menu,name:personal_crm.menu_add_relationships
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_list
+msgid "Add relationships"
+msgstr "Beziehungen hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Add relationships from this pair"
+msgstr "Beziehungen zwischen diesen Kontakten hinzufügen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "All"
+msgstr "Alle"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "All stored relationships for this pair"
+msgstr "Alle gespeicherten Beziehungen zwischen diesen Kontakten"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__allow_self
+msgid "Allow self relationships"
+msgstr "Beziehungen mit sich selbst erlauben"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "An overlapping relationship already exists."
+msgstr "Es besteht bereits eine zeitlich überschneidende Beziehung."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Archive"
+msgstr "Archivieren"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.partner_search
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_search
+msgid "Archived"
+msgstr "Archiviert"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Back"
+msgstr "Zurück"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_birthdate
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_birthdate
+msgid "Birthdate"
+msgstr "Geburtsdatum"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Both assignments are possible. Choose each contact's role explicitly."
+msgstr ""
+"Beide Zuordnungen sind möglich. Wählen Sie die Rolle jedes Kontakts "
+"ausdrücklich aus."
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_male:personal_crm.relationship_type_sibling
+#: model:personal.crm.relationship.type,right_label_male:personal_crm.relationship_type_sibling
+msgid "Brother"
+msgstr "Bruder"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Center focal contact"
+msgstr "Ausgangskontakt zentrieren"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Center view"
+msgstr "Ansicht zentrieren"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_parent
+msgid "Child"
+msgstr "Kind"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Choose a relationship"
+msgstr "Beziehung auswählen"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "Choose a role and at least one related contact."
+msgstr "Wählen Sie eine Rolle und mindestens einen weiteren Kontakt aus."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Choose a valid role assignment before saving."
+msgstr "Wählen Sie vor dem Speichern eine gültige Rollenzuordnung aus."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "Choose a valid role assignment."
+msgstr "Wählen Sie eine gültige Rollenzuordnung aus."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Choose an end date."
+msgstr "Wählen Sie ein Enddatum aus."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Choose both contacts and a relationship type."
+msgstr "Wählen Sie beide Kontakte und einen Beziehungstyp aus."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/partner.py:0
+msgid "Choose one date using the equals operator."
+msgstr "Wählen Sie mit dem Gleichheitsoperator genau ein Datum aus."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Click a contact to expand · Drag empty space to pan"
+msgstr ""
+"Kontakt anklicken, um Verbindungen einzublenden · Leeren Bereich ziehen, um "
+"die Ansicht zu verschieben"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Close details"
+msgstr "Details schließen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Close search"
+msgstr "Suche schließen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Collapse connections"
+msgstr "Verbindungen ausblenden"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Collapsed"
+msgstr "Eingeklappt"
+
+#. module: personal_crm
+#: model:ir.actions.act_window,name:personal_crm.action_companies
+#: model:ir.ui.menu,name:personal_crm.menu_companies
+msgid "Companies and authorities"
+msgstr "Unternehmen und Behörden"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__left_partner_type__c
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__right_partner_type__c
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: model:ir.model.fields.selection,name:personal_crm.selection__res_partner__personal_crm_entity_type__company
+msgid "Company / authority"
+msgstr "Unternehmen / Behörde"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+msgid "Company name"
+msgstr "Name des Unternehmens"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.model,name:personal_crm.model_res_partner
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__this_partner_id
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "Contact is unavailable."
+msgstr "Kontakt ist nicht verfügbar."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_entity_type
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_entity_type
+msgid "Contact kind"
+msgstr "Kontaktart"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "Contact kind, tags, or self-link rules do not fit this relationship."
+msgstr ""
+"Kontaktart, Schlagwörter oder Regeln für Beziehungen mit sich selbst passen "
+"nicht zu dieser Beziehung."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid ""
+"Contact kind, tags, or self-relationship rules are incompatible with this "
+"relationship."
+msgstr ""
+"Kontaktart, Schlagwörter oder Regeln für Beziehungen mit sich selbst sind "
+"mit dieser Beziehung nicht vereinbar."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__this_role
+msgid "Contact's role"
+msgstr "Rolle des Kontakts"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Continue"
+msgstr "Fortfahren"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Continue in dedicated viewer"
+msgstr "In der Netzwerkansicht fortfahren"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__create_uid
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__create_uid
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__create_date
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__create_date
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__is_current
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_search
+msgid "Current"
+msgstr "Aktuell"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Current relationships"
+msgstr "Aktuelle Beziehungen"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.note_search
+msgid "Date"
+msgstr "Datum"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Dates (optional)"
+msgstr "Zeitraum (optional)"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label_female:personal_crm.relationship_type_parent
+msgid "Daughter"
+msgstr "Tochter"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Delete"
+msgstr "Löschen"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__handle_invalid_onchange__delete
+msgid "Delete incompatible relationships"
+msgstr "Nicht passende Beziehungen löschen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Delete only this relationship? %s. Shared notes will be retained."
+msgstr "Nur diese Beziehung löschen? %s. Gemeinsame Notizen bleiben erhalten."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Depth"
+msgstr "Tiefe"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_ir_binary__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_ir_module_module__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__display_name
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid ""
+"Drag to another contact to add a relationship, or click to choose a contact"
+msgstr ""
+"Auf einen anderen Kontakt ziehen, um eine Beziehung hinzuzufügen, oder "
+"klicken, um einen Kontakt auszuwählen"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "Each related contact can be selected only once."
+msgstr "Jeder weitere Kontakt kann nur einmal ausgewählt werden."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Edit relationship"
+msgstr "Beziehung bearbeiten"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__any_partner_id
+msgid "Either contact"
+msgstr "Beliebiger Kontakt"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_employment
+msgid "Employee"
+msgstr "Beschäftigte Person"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_employment
+msgid "Employer"
+msgstr "Arbeitgeber"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_employment
+msgid "Employment"
+msgstr "Beschäftigung"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "End date"
+msgstr "Enddatum"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__handle_invalid_onchange__end
+msgid "End incompatible relationships today"
+msgstr "Nicht passende Beziehungen heute beenden"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "End relationship"
+msgstr "Beziehung beenden"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_search
+msgid "Ended"
+msgstr "Beendet"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship_type.py:0
+msgid "Existing relationships do not satisfy these rules."
+msgstr "Bestehende Beziehungen erfüllen diese Regeln nicht."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Expand connections"
+msgstr "Verbindungen einblenden"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Expanded"
+msgstr "Ausgeklappt"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Expansion cancelled. The preceding network is unchanged."
+msgstr "Einblenden abgebrochen. Das vorherige Netzwerk bleibt bestehen."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Exploration state exceeds the safety limit."
+msgstr ""
+"Der Zustand der Netzwerkerkundung überschreitet die Sicherheitsgrenze."
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_male:personal_crm.relationship_type_parent
+msgid "Father"
+msgstr "Vater"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__res_partner__personal_crm_gender__female
+msgid "Female"
+msgstr "Weiblich"
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_ir_binary
+msgid "File streaming helper model for controllers"
+msgstr "Hilfsmodell für die Dateiübertragung in Controllern"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Find a contact"
+msgstr "Kontakt suchen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Find contact"
+msgstr "Kontakt suchen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__left_partner_id
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+msgid "First contact"
+msgstr "Erster Kontakt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__reverse_roles
+msgid "First contact has the second role"
+msgstr "Erster Kontakt hat die zweite Rolle"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__left_partner_type
+msgid "First contact kind"
+msgstr "Art des ersten Kontakts"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__left_partner_category_id
+msgid "First contact tag"
+msgstr "Schlagwort des ersten Kontakts"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__left_label
+msgid "First contact's role"
+msgstr "Rolle des ersten Kontakts"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_type_form
+msgid "First role"
+msgstr "Erste Rolle"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__left_label_female
+msgid "First role (female)"
+msgstr "Erste Rolle (weiblich)"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__left_label_male
+msgid "First role (male)"
+msgstr "Erste Rolle (männlich)"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__left_label
+msgid "First role (neutral)"
+msgstr "Erste Rolle (neutral)"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship__network_orientation__forward
+msgid "First role → Second role"
+msgstr "Erste Rolle → Zweite Rolle"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Fit network"
+msgstr "Netzwerk einpassen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Focal contact"
+msgstr "Ausgangskontakt"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Focus here"
+msgstr "Hier fokussieren"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Forward"
+msgstr "Vorwärts"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_friend
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_friend
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_friend
+msgid "Friend"
+msgstr "Freund"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__date_start
+msgid "From"
+msgstr "Von"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Full network"
+msgstr "Gesamtes Netzwerk"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Full network complete"
+msgstr "Gesamtes Netzwerk vollständig"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Full network exploration · some connections collapsed"
+msgstr "Gesamtes Netzwerk erkunden · einige Verbindungen sind eingeklappt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_gender
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_gender
+msgid "Gender"
+msgstr "Geschlecht"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_grandparent
+msgid "Grandchild"
+msgstr "Enkelkind"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label_female:personal_crm.relationship_type_grandparent
+msgid "Granddaughter"
+msgstr "Enkelin"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_male:personal_crm.relationship_type_grandparent
+msgid "Grandfather"
+msgstr "Großvater"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_female:personal_crm.relationship_type_grandparent
+msgid "Grandmother"
+msgstr "Großmutter"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_grandparent
+msgid "Grandparent"
+msgstr "Großelternteil"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_grandparent
+msgid "Grandparent / Grandchild"
+msgstr "Großelternteil / Enkelkind"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label_male:personal_crm.relationship_type_grandparent
+msgid "Grandson"
+msgstr "Enkel"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_male:personal_crm.relationship_type_spouse
+#: model:personal.crm.relationship.type,right_label_male:personal_crm.relationship_type_spouse
+msgid "Husband"
+msgstr "Ehemann"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_ir_binary__id
+#: model:ir.model.fields,field_description:personal_crm.field_ir_module_module__id
+#: model:ir.model.fields,field_description:personal_crm.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__id
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__id
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__id
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Interactive contact network"
+msgstr "Interaktives Kontaktnetzwerk"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__handle_invalid_onchange__ignore
+msgid "Keep existing relationships unchanged"
+msgstr "Bestehende Beziehungen unverändert lassen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__write_uid
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__write_uid
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__write_date
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__write_date
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__left_partner_domain
+msgid "Left Partner Domain"
+msgstr "Bereich für den ersten Kontakt"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Loading accessible connections…"
+msgstr "Zugängliche Verbindungen werden geladen …"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__res_partner__personal_crm_gender__male
+msgid "Male"
+msgstr "Männlich"
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_ir_module_module
+msgid "Module"
+msgstr "Modul"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_female:personal_crm.relationship_type_parent
+msgid "Mother"
+msgstr "Mutter"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__name
+#: model_terms:ir.ui.view,arch_db:personal_crm.person_form
+msgid "Name"
+msgstr "Name"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.person_form
+msgid "Network"
+msgstr "Netzwerk"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__network_guidance
+msgid "Network Guidance"
+msgstr "Hinweis zum Netzwerk"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Network details"
+msgstr "Netzwerkdetails"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Network exceeds the relationship safety limit (%s)."
+msgstr "Das Netzwerk überschreitet die Sicherheitsgrenze von %s Beziehungen."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid ""
+"Network exceeds the safety limit of %s contacts. Narrow the relationship "
+"types."
+msgstr ""
+"Das Netzwerk überschreitet die Sicherheitsgrenze von %s Kontakten. Schränken"
+" Sie die Beziehungstypen ein."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Network exceeds the safety limit of %s relationships."
+msgstr "Das Netzwerk überschreitet die Sicherheitsgrenze von %s Beziehungen."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid ""
+"Network traversal exceeded the safety limit. Narrow the relationship types."
+msgstr ""
+"Die Netzwerkerkundung hat die Sicherheitsgrenze überschritten. Schränken Sie"
+" die Beziehungstypen ein."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Network ·"
+msgstr "Netzwerk ·"
+
+#. module: personal_crm
+#: model:res.groups.privilege,placeholder:personal_crm.privilege_personal_crm
+msgid "No"
+msgstr "Nein"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid ""
+"No connections are visible under the current filters and expansion choices."
+msgstr ""
+"Mit den aktuellen Filtern und Aufklappoptionen sind keine Verbindungen "
+"sichtbar."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "No end date"
+msgstr "Kein Enddatum"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "No start date"
+msgstr "Kein Startdatum"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "No visible matches."
+msgstr "Keine sichtbaren Treffer."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "None"
+msgstr "Keine"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__body
+msgid "Note"
+msgstr "Notiz"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__date
+msgid "Note date"
+msgstr "Notizdatum"
+
+#. module: personal_crm
+#: model:ir.actions.act_window,name:personal_crm.action_notes
+#: model:ir.ui.menu,name:personal_crm.menu_notes
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+msgid "Notes"
+msgstr "Notizen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Open contact"
+msgstr "Kontakt öffnen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Open relationship"
+msgstr "Beziehung öffnen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Open stored relationship"
+msgstr "Gespeicherte Beziehung öffnen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Other accessible contacts"
+msgstr "Andere zugängliche Kontakte"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_parent
+msgid "Parent"
+msgstr "Elternteil"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_parent
+msgid "Parent / Child"
+msgstr "Elternteil / Kind"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_partner
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_partner
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: personal_crm
+#: model:ir.actions.act_window,name:personal_crm.action_persons
+#: model:ir.ui.menu,name:personal_crm.menu_people
+msgid "People"
+msgstr "Personen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__left_partner_type__p
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__right_partner_type__p
+#: model:ir.model.fields.selection,name:personal_crm.selection__res_partner__personal_crm_entity_type__person
+msgid "Person"
+msgstr "Person"
+
+#. module: personal_crm
+#: model:ir.module.module,shortdesc:base.module_personal_crm
+#: model:ir.ui.menu,name:personal_crm.menu_root
+#: model:res.groups.privilege,name:personal_crm.privilege_personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.person_form
+msgid "Personal CRM"
+msgstr "Personal CRM"
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_personal_crm_note
+msgid "Personal CRM Note"
+msgstr "Personal-CRM-Notiz"
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_personal_crm_relationship
+msgid "Personal CRM Relationship"
+msgstr "Personal-CRM-Beziehung"
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_personal_crm_relationship_type
+msgid "Personal CRM Relationship Type"
+msgstr "Personal-CRM-Beziehungstyp"
+
+#. module: personal_crm
+#: model:res.groups,name:personal_crm.group_user
+msgid "Personal CRM User"
+msgstr "Personal-CRM-Benutzer"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Personal CRM authorization is required."
+msgstr "Eine Berechtigung für Personal CRM ist erforderlich."
+
+#. module: personal_crm
+#: model:ir.model.fields,help:personal_crm.field_res_partner__personal_crm_entity_type
+#: model:ir.model.fields,help:personal_crm.field_res_users__personal_crm_entity_type
+msgid ""
+"Personal CRM classification, independent of Odoo's VAT-based company "
+"heuristic."
+msgstr ""
+"Klassifizierung für Personal CRM, unabhängig von Odoos umsatzsteuerbasierter"
+" Unternehmenserkennung."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_contact
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_contact
+msgid "Personal CRM contact"
+msgstr "Personal-CRM-Kontakt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_is_company
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_is_company
+msgid "Personal Crm Is Company"
+msgstr "Personal CRM: Ist Unternehmen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_relationship_count
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_relationship_count
+msgid "Personal Crm Relationship Count"
+msgstr "Personal CRM: Anzahl Beziehungen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_relationship_left_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_relationship_left_ids
+msgid "Personal Crm Relationship Left"
+msgstr "Personal CRM: Erste Beziehungsseite"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_relationship_right_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_relationship_right_ids
+msgid "Personal Crm Relationship Right"
+msgstr "Personal CRM: Zweite Beziehungsseite"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__note_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_note_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_note_ids
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.person_form
+msgid "Personal notes"
+msgstr "Persönliche Notizen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Regroup connections"
+msgstr "Verbindungen wieder gruppieren"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship_type__handle_invalid_onchange__restrict
+msgid "Reject changes that invalidate relationships"
+msgstr "Änderungen ablehnen, die Beziehungen ungültig machen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__other_partner_id
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_search_relationship_partner_id
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_search_relationship_partner_id
+msgid "Related contact"
+msgstr "Verbundener Kontakt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_search_relationship_category_id
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_search_relationship_category_id
+msgid "Related contact tag"
+msgstr "Schlagwort verbundener Kontakte"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__other_role
+msgid "Related contact's role"
+msgstr "Rolle des verbundenen Kontakts"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__partner_ids
+#: model_terms:ir.ui.view,arch_db:personal_crm.company_form
+msgid "Related contacts"
+msgstr "Verbundene Kontakte"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__relationship_ids
+msgid "Related relationships"
+msgstr "Verbundene Beziehungen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__type_id
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_search
+msgid "Relationship"
+msgstr "Beziehung"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship archived."
+msgstr "Beziehung archiviert."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship deleted."
+msgstr "Beziehung gelöscht."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Relationship details"
+msgstr "Beziehungsdetails"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship end date saved. The end date is inclusive."
+msgstr ""
+"Enddatum der Beziehung gespeichert. Der Endtag zählt noch zur Beziehung."
+
+#. module: personal_crm
+#. odoo-javascript
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Relationship network"
+msgstr "Beziehungsnetzwerk"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship saved outside the current network."
+msgstr "Beziehung gespeichert. Sie liegt außerhalb des aktuellen Netzwerks."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship saved."
+msgstr "Beziehung gespeichert."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_search_relationship_type_id
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_search_relationship_type_id
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_type_form
+msgid "Relationship type"
+msgstr "Beziehungstyp"
+
+#. module: personal_crm
+#: model:ir.actions.act_window,name:personal_crm.action_relationship_types
+#: model:ir.ui.menu,name:personal_crm.menu_types
+msgid "Relationship types"
+msgstr "Beziehungstypen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Relationship types (%s selected)"
+msgstr "Beziehungstypen (%s ausgewählt)"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_search_relationship_date
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_search_relationship_date
+msgid "Relationship valid on"
+msgstr "Beziehung gültig am"
+
+#. module: personal_crm
+#: model:ir.actions.act_window,name:personal_crm.action_relations
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__relationship_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_partner__personal_crm_relation_ids
+#: model:ir.model.fields,field_description:personal_crm.field_res_users__personal_crm_relation_ids
+#: model:ir.ui.menu,name:personal_crm.menu_relations
+msgid "Relationships"
+msgstr "Beziehungen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Relationships could not be saved."
+msgstr "Die Beziehungen konnten nicht gespeichert werden."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.js:0
+msgid "Relationships were saved, but the view could not refresh."
+msgstr ""
+"Die Beziehungen wurden gespeichert, aber die Ansicht konnte nicht "
+"aktualisiert werden."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Remove"
+msgstr "Entfernen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Reset exploration"
+msgstr "Erkundung zurücksetzen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Return to original contact"
+msgstr "Zum ursprünglichen Kontakt zurückkehren"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Reveal individual connections"
+msgstr "Einzelne Verbindungen anzeigen"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__right_partner_domain
+msgid "Right Partner Domain"
+msgstr "Bereich für den zweiten Kontakt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__network_orientation
+msgid "Role assignment"
+msgstr "Rollenzuordnung"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "Role assignment is valid."
+msgstr "Die Rollenzuordnung ist gültig."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__type_is_symmetric
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__is_symmetric
+msgid "Same role on both sides"
+msgstr "Gleiche Rolle auf beiden Seiten"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Save end date"
+msgstr "Enddatum speichern"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Save relationship"
+msgstr "Beziehung speichern"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Save this contact to explore and build its network."
+msgstr ""
+"Speichern Sie diesen Kontakt, um sein Netzwerk zu erkunden und zu erweitern."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Search for the first contact below."
+msgstr "Suchen Sie unten nach dem ersten Kontakt."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Search visible and other contacts…"
+msgstr "Sichtbare und andere Kontakte suchen …"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__right_partner_id
+#: model_terms:ir.ui.view,arch_db:personal_crm.relation_form
+msgid "Second contact"
+msgstr "Zweiter Kontakt"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__right_partner_type
+msgid "Second contact kind"
+msgstr "Art des zweiten Kontakts"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__right_partner_category_id
+msgid "Second contact tag"
+msgstr "Schlagwort des zweiten Kontakts"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__right_label
+msgid "Second contact's role"
+msgstr "Rolle des zweiten Kontakts"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_type_form
+msgid "Second role"
+msgstr "Zweite Rolle"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__right_label_female
+msgid "Second role (female)"
+msgstr "Zweite Rolle (weiblich)"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__right_label_male
+msgid "Second role (male)"
+msgstr "Zweite Rolle (männlich)"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__right_label
+msgid "Second role (neutral)"
+msgstr "Zweite Rolle (neutral)"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__personal_crm_relationship__network_orientation__reverse
+msgid "Second role → First role"
+msgstr "Zweite Rolle → Erste Rolle"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/backend.py:0
+msgid "Select only one Personal CRM document backend."
+msgstr "Wählen Sie nur ein Dokumenten-Backend für Personal CRM aus."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/backend.py:0
+msgid ""
+"Select only one Personal CRM document backend. Uninstall the other backend "
+"first."
+msgstr ""
+"Wählen Sie nur ein Dokumenten-Backend für Personal CRM aus. Deinstallieren "
+"Sie zuerst das andere Backend."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Selected contacts"
+msgstr "Ausgewählte Kontakte"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_sibling
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_sibling
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_sibling
+msgid "Sibling"
+msgstr "Geschwisterteil"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_female:personal_crm.relationship_type_sibling
+#: model:personal.crm.relationship.type,right_label_female:personal_crm.relationship_type_sibling
+msgid "Sister"
+msgstr "Schwester"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,right_label_male:personal_crm.relationship_type_parent
+msgid "Son"
+msgstr "Sohn"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label:personal_crm.relationship_type_spouse
+#: model:personal.crm.relationship.type,name:personal_crm.relationship_type_spouse
+#: model:personal.crm.relationship.type,right_label:personal_crm.relationship_type_spouse
+msgid "Spouse"
+msgstr "Ehepartner"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Stored relationships"
+msgstr "Gespeicherte Beziehungen"
+
+#. module: personal_crm
+#: model:ir.model.fields,help:personal_crm.field_personal_crm_relationship__reverse_roles
+msgid ""
+"Switch the role assignments before saving, for example when adding a parent "
+"from a child's contact."
+msgstr ""
+"Tauschen Sie vor dem Speichern die Rollenzuordnung, zum Beispiel wenn Sie "
+"vom Kontakt eines Kindes aus ein Elternteil hinzufügen."
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.relationship_type_search
+msgid "Symmetric"
+msgstr "Symmetrisch"
+
+#. module: personal_crm
+#: model_terms:ir.ui.view,arch_db:personal_crm.partner_search
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "The end date is inclusive."
+msgstr "Der Endtag zählt noch zur Beziehung."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "The focal contact is unavailable or inaccessible."
+msgstr "Der Ausgangskontakt ist nicht verfügbar oder nicht zugänglich."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "The network could not be loaded."
+msgstr "Das Netzwerk konnte nicht geladen werden."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "The start date must not be after the end date."
+msgstr "Das Startdatum darf nicht nach dem Enddatum liegen."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid ""
+"These contacts do not satisfy the type's contact, tag, or self-link rules."
+msgstr ""
+"Diese Kontakte erfüllen die Kontakt-, Schlagwort- oder "
+"Selbstbeziehungsregeln des Beziehungstyps nicht."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/partner.py:0
+msgid "This change would invalidate an existing relationship."
+msgstr "Diese Änderung würde eine bestehende Beziehung ungültig machen."
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid "This exploration contains %s relationships. Continue?"
+msgstr "Diese Erkundung umfasst %s Beziehungen. Fortfahren?"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/network.py:0
+msgid ""
+"This exploration includes at least %s contacts and %s relationships. "
+"Continue?"
+msgstr ""
+"Diese Erkundung umfasst mindestens %s Kontakte und %s Beziehungen. "
+"Fortfahren?"
+
+#. module: personal_crm
+#. odoo-python
+#: code:addons/personal_crm/models/relationship.py:0
+msgid "This relationship already exists during an overlapping period."
+msgstr "Diese Beziehung besteht bereits in einem überlappenden Zeitraum."
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_note__name
+msgid "Title"
+msgstr "Titel"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__type_domain
+msgid "Type Domain"
+msgstr "Bereich für Beziehungstypen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Type at least two characters to search other contacts."
+msgstr "Geben Sie mindestens zwei Zeichen ein, um andere Kontakte zu suchen."
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "Type at least two letters"
+msgstr "Mindestens zwei Buchstaben eingeben"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "Unexplored"
+msgstr "Noch nicht erkundet"
+
+#. module: personal_crm
+#: model:ir.model.fields.selection,name:personal_crm.selection__res_partner__personal_crm_gender__unknown
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship__date_end
+msgid "Until"
+msgstr "Bis"
+
+#. module: personal_crm
+#: model:ir.model.fields,help:personal_crm.field_res_partner__personal_crm_gender
+#: model:ir.model.fields,help:personal_crm.field_res_users__personal_crm_gender
+msgid ""
+"Used for relationship role labels. Unknown or unset uses neutral labels."
+msgstr ""
+"Wird für die Rollenbezeichnungen in Beziehungen verwendet. Bei „Unbekannt“ "
+"oder leerem Feld werden neutrale Bezeichnungen verwendet."
+
+#. module: personal_crm
+#: model:ir.model,name:personal_crm.model_ir_ui_view
+msgid "View"
+msgstr "Ansicht"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "View contact details"
+msgstr "Kontaktdetails anzeigen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.js:0
+msgid "View contact details for %s"
+msgstr "Kontaktdetails für %s anzeigen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Visible contacts"
+msgstr "Sichtbare Kontakte"
+
+#. module: personal_crm
+#: model:ir.model.fields,field_description:personal_crm.field_personal_crm_relationship_type__handle_invalid_onchange
+msgid "When rules change"
+msgstr "Wenn sich Regeln ändern"
+
+#. module: personal_crm
+#: model:personal.crm.relationship.type,left_label_female:personal_crm.relationship_type_spouse
+#: model:personal.crm.relationship.type,right_label_female:personal_crm.relationship_type_spouse
+msgid "Wife"
+msgstr "Ehefrau"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Zoom in"
+msgstr "Vergrößern"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "Zoom out"
+msgstr "Verkleinern"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "i"
+msgstr "i"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/relationship_add.xml:0
+msgid "is the"
+msgstr "ist"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "· Center view"
+msgstr "· Ansicht zentrieren"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "· Ctrl + scroll to zoom"
+msgstr "· Strg + Mausrad zum Zoomen"
+
+#. module: personal_crm
+#. odoo-javascript
+#: code:addons/personal_crm/static/src/network/network.xml:0
+msgid "★ Focal contact"
+msgstr "★ Ausgangskontakt"

@@ -1,0 +1,40 @@
+.o_pcrm_network {
+    background: var(--o-view-background-color, #fff);
+    border: 1px solid var(--border-color, #dce2e8);
+    border-radius: 8px;
+    overflow: hidden;
+    .badge.text-bg-light { background: #eef2f7 !important; color: #30445b !important; }
+    .pcrm_toolbar { padding: 12px; border-bottom: 1px solid #dce2e8; }
+    .pcrm_search { position: relative; max-width: 580px; }
+    .pcrm_results { position: absolute; left: 0; right: 0; top: 100%; z-index: 5; max-height: 320px; overflow: auto; box-shadow: 0 6px 24px #0002; }
+    .pcrm_workspace { display: flex; min-height: 520px; position: relative; }
+    .pcrm_graph { flex: 1; min-width: 0; background: radial-gradient(circle, #cbd5df 1px, transparent 1px) 0 0 / 22px 22px, #f6f8fb; }
+    .pcrm_canvas { width: 100%; min-height: 400px; height: calc(100vh - 300px); max-height: 900px; display: block; touch-action: none; }
+    .pcrm_inspector { width: 360px; flex-shrink: 0; overflow: auto; max-height: 80vh; border-left: 1px solid #dce2e8; padding: 14px; background: var(--o-view-background-color, #fff); }
+    .pcrm_inspector:has(.o_form_view) { width: unquote("min(650px, 55%)"); }
+    .pcrm_edge { fill: none; stroke: #718397; stroke-width: 2; pointer-events: none; }
+    .pcrm_edge_hit { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; }
+    .pcrm_edge_label { font-size: 12px; fill: #30445b; paint-order: stroke; stroke: #f6f8fb; stroke-width: 5px; stroke-linejoin: round; pointer-events: none; }
+    .pcrm_node_circle { vector-effect: non-scaling-stroke; fill: #fff; stroke: #718397; stroke-width: 2; }
+    [data-node] { cursor: pointer; }
+    .pcrm_focal .pcrm_node_circle { stroke: #7152a3; stroke-width: 5; }
+    .pcrm_node_selected .pcrm_node_circle { stroke: #146caa; stroke-dasharray: 6 3; stroke-width: 4; }
+    .pcrm_connection_selected .pcrm_edge { stroke: #146caa; stroke-width: 4; stroke-dasharray: 7 3; }
+    .pcrm_node_name { font-size: 14px; font-weight: 600; fill: #21364a; paint-order: stroke; stroke: #f6f8fb; stroke-width: 4px; }
+    .pcrm_node_state { font-size: 10px; fill: #526477; }
+    .pcrm_focal_label { font-size: 12px; fill: #644091; font-weight: bold; }
+    .pcrm_initials { font-size: 20px; fill: #30445b; }
+    .pcrm_connect_handle { border: 1px solid #655087; background: #fff; color: #655087; border-radius: 50%; width: 26px; height: 26px; cursor: crosshair; font-size: 18px; line-height: 18px; }
+    [role=button]:focus-visible { outline: 3px solid #146caa; outline-offset: 5px; }
+    .pcrm_working > .pcrm_graph, .pcrm_working > .pcrm_inspector { pointer-events: none; opacity: .65; }
+    &.o_pcrm_embedded {
+        .pcrm_canvas { height: 420px; min-height: 300px; touch-action: pan-y; }
+        .pcrm_workspace { min-height: 380px; }
+        .pcrm_inspector { position: absolute; right: 8px; top: 50px; max-height: 330px; width: 290px; border: 1px solid #dce2e8; border-radius: 8px; box-shadow: 0 4px 20px #0002; }
+    }
+    @media (max-width: 767px) {
+        .pcrm_workspace { flex-direction: column; }
+        .pcrm_inspector, .pcrm_inspector:has(.o_form_view) { width: 100%; max-height: 450px; border-left: 0; border-top: 1px solid #dce2e8; }
+        .pcrm_canvas { height: 420px; }
+    }
+}

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="relationship_type_friend" model="personal.crm.relationship.type">
+            <field name="name">Friend</field>
+            <field name="is_symmetric" eval="True"/>
+            <field name="left_label">Friend</field>
+            <field name="right_label">Friend</field>
+            <field name="left_label_male" eval="False"/>
+            <field name="left_label_female" eval="False"/>
+            <field name="right_label_male" eval="False"/>
+            <field name="right_label_female" eval="False"/>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_spouse" model="personal.crm.relationship.type">
+            <field name="name">Spouse</field>
+            <field name="is_symmetric" eval="True"/>
+            <field name="left_label">Spouse</field>
+            <field name="right_label">Spouse</field>
+            <field name="left_label_male">Husband</field>
+            <field name="left_label_female">Wife</field>
+            <field name="right_label_male">Husband</field>
+            <field name="right_label_female">Wife</field>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_partner" model="personal.crm.relationship.type">
+            <field name="name">Partner</field>
+            <field name="is_symmetric" eval="True"/>
+            <field name="left_label">Partner</field>
+            <field name="right_label">Partner</field>
+            <field name="left_label_male" eval="False"/>
+            <field name="left_label_female" eval="False"/>
+            <field name="right_label_male" eval="False"/>
+            <field name="right_label_female" eval="False"/>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_sibling" model="personal.crm.relationship.type">
+            <field name="name">Sibling</field>
+            <field name="is_symmetric" eval="True"/>
+            <field name="left_label">Sibling</field>
+            <field name="right_label">Sibling</field>
+            <field name="left_label_male">Brother</field>
+            <field name="left_label_female">Sister</field>
+            <field name="right_label_male">Brother</field>
+            <field name="right_label_female">Sister</field>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_parent" model="personal.crm.relationship.type">
+            <field name="name">Parent / Child</field>
+            <field name="is_symmetric" eval="False"/>
+            <field name="left_label">Parent</field>
+            <field name="right_label">Child</field>
+            <field name="left_label_male">Father</field>
+            <field name="left_label_female">Mother</field>
+            <field name="right_label_male">Son</field>
+            <field name="right_label_female">Daughter</field>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_grandparent" model="personal.crm.relationship.type">
+            <field name="name">Grandparent / Grandchild</field>
+            <field name="is_symmetric" eval="False"/>
+            <field name="left_label">Grandparent</field>
+            <field name="right_label">Grandchild</field>
+            <field name="left_label_male">Grandfather</field>
+            <field name="left_label_female">Grandmother</field>
+            <field name="right_label_male">Grandson</field>
+            <field name="right_label_female">Granddaughter</field>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">p</field>
+        </record>
+        <record id="relationship_type_employment" model="personal.crm.relationship.type">
+            <field name="name">Employment</field>
+            <field name="is_symmetric" eval="False"/>
+            <field name="left_label">Employee</field>
+            <field name="right_label">Employer</field>
+            <field name="left_label_male" eval="False"/>
+            <field name="left_label_female" eval="False"/>
+            <field name="right_label_male" eval="False"/>
+            <field name="right_label_female" eval="False"/>
+            <field name="left_partner_type">p</field>
+            <field name="right_partner_type">c</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="person_01" model="res.partner">
+            <field name="name">Ada Starling</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1971-03-01</field>
+            <field name="street">1 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person1@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_02" model="res.partner">
+            <field name="name">Basil Fenwick</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1972-03-02</field>
+            <field name="street">2 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person2@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="person_03" model="res.partner">
+            <field name="name">Cora Moonwell</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1973-03-03</field>
+            <field name="street">3 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person3@example.invalid</field>
+            <field name="personal_crm_gender">unknown</field>
+        </record>
+        <record id="person_04" model="res.partner">
+            <field name="name">Dorian Quill</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1974-03-04</field>
+            <field name="street">4 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person4@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_05" model="res.partner">
+            <field name="name">Elara Wren</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1975-03-05</field>
+            <field name="street">5 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person5@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="person_06" model="res.partner">
+            <field name="name">Felix Bramble</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1976-03-06</field>
+            <field name="street">6 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person6@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_07" model="res.partner">
+            <field name="name">Greta Cloud</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1977-03-07</field>
+            <field name="street">7 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person7@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="person_08" model="res.partner">
+            <field name="name">Hugo Flint</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1978-03-08</field>
+            <field name="street">8 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person8@example.invalid</field>
+            <field name="personal_crm_gender">unknown</field>
+        </record>
+        <record id="person_09" model="res.partner">
+            <field name="name">Iris Meadow</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1979-03-09</field>
+            <field name="street">9 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person9@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_10" model="res.partner">
+            <field name="name">Jasper Reed</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1980-03-10</field>
+            <field name="street">10 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person10@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="person_11" model="res.partner">
+            <field name="name">Kira Vale</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1981-03-11</field>
+            <field name="street">11 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person11@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_12" model="res.partner">
+            <field name="name">Luca Moss</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1982-03-12</field>
+            <field name="street">12 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person12@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="person_13" model="res.partner">
+            <field name="name">Mira Brook</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1983-03-13</field>
+            <field name="street">13 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person13@example.invalid</field>
+            <field name="personal_crm_gender">unknown</field>
+        </record>
+        <record id="person_14" model="res.partner">
+            <field name="name">Nico Finch</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1984-03-14</field>
+            <field name="street">14 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person14@example.invalid</field>
+            <field name="personal_crm_gender">female</field>
+        </record>
+        <record id="person_15" model="res.partner">
+            <field name="name">Opal Lake</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="personal_crm_birthdate">1985-03-15</field>
+            <field name="street">15 Fiction Lane</field>
+            <field name="zip">1010</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+            <field name="email">person15@example.invalid</field>
+            <field name="personal_crm_gender">male</field>
+        </record>
+        <record id="company_01" model="res.partner">
+            <field name="name">Fableton Civic Office</field>
+            <field name="personal_crm_entity_type">company</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="street">1 Imaginary Square</field>
+            <field name="zip">1020</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+        </record>
+        <record id="company_02" model="res.partner">
+            <field name="name">Cloudleaf Studio</field>
+            <field name="personal_crm_entity_type">company</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="street">2 Imaginary Square</field>
+            <field name="zip">1020</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+        </record>
+        <record id="company_03" model="res.partner">
+            <field name="name">Moonwell Housing</field>
+            <field name="personal_crm_entity_type">company</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="street">3 Imaginary Square</field>
+            <field name="zip">1020</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+        </record>
+        <record id="company_04" model="res.partner">
+            <field name="name">Imaginary Tax Authority</field>
+            <field name="personal_crm_entity_type">company</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="street">4 Imaginary Square</field>
+            <field name="zip">1020</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+        </record>
+        <record id="company_05" model="res.partner">
+            <field name="name">Starling Library</field>
+            <field name="personal_crm_entity_type">company</field>
+            <field name="personal_crm_contact" eval="True"/>
+            <field name="street">5 Imaginary Square</field>
+            <field name="zip">1020</field>
+            <field name="city">Fableton</field>
+            <field name="country_id" ref="base.at"/>
+        </record>
+    </data>
+</odoo>

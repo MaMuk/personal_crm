@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_add_relationships" model="ir.actions.client">
+        <field name="name">Add relationships</field>
+        <field name="tag">personal_crm.relationship_add</field>
+    </record>
+    <record id="relation_list" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.list</field>
+        <field name="model">personal.crm.relationship</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="not is_current">
+                <header><button name="%(personal_crm.action_add_relationships)d" type="action" string="Add relationships" display="always" class="btn-secondary"/></header>
+                <field name="this_partner_id" widget="many2one" context="{'personal_crm_navigation': True}"/>
+                <field name="this_role"/>
+                <field name="type_id" optional="show"/>
+                <field name="other_role"/>
+                <field name="other_partner_id" widget="many2one" context="{'personal_crm_navigation': True}"/>
+                <field name="date_start" optional="show"/>
+                <field name="date_end" optional="show"/>
+                <field name="is_current" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+    <record id="relation_form" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.form</field>
+        <field name="model">personal.crm.relationship</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form string="Relationship">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <field name="type_id" options="{'no_quick_create': True}"/>
+                        <field name="type_is_symmetric" invisible="1"/>
+                        <field name="reverse_roles" invisible="type_is_symmetric"/>
+                    </group>
+                    <group>
+                        <group string="First contact">
+                            <field name="left_partner_id" context="{'personal_crm_navigation': True}"/>
+                            <field name="left_label" readonly="1"/>
+                        </group>
+                        <group string="Second contact">
+                            <field name="right_partner_id" context="{'personal_crm_navigation': True}"/>
+                            <field name="right_label" readonly="1"/>
+                        </group>
+                    </group>
+                    <group><field name="date_start"/><field name="date_end"/></group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="note_ids" context="{'default_partner_ids': [(6, 0, ([left_partner_id] if left_partner_id else []) + ([right_partner_id] if right_partner_id else []))], 'default_relationship_ids': [(6, 0, [id])] if id else [], 'form_view_ref': 'personal_crm.note_form'}">
+                                <list><control><create string="Add note"/></control><field name="date"/><field name="name"/></list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="relationship_search" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.search</field>
+        <field name="model">personal.crm.relationship</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="any_partner_id"/>
+                <field name="type_id"/>
+                <field name="left_partner_id"/><field name="right_partner_id"/>
+                <separator/>
+                <filter name="current" string="Current" domain="[('is_current', '=', True)]"/>
+                <filter name="ended" string="Ended" domain="[('date_end', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group><filter name="group_type" string="Relationship" context="{'group_by': 'type_id'}"/></group>
+            </search>
+        </field>
+    </record>
+    <record id="action_relations" model="ir.actions.act_window">
+        <field name="name">Relationships</field>
+        <field name="res_model">personal.crm.relationship</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'personal_crm_navigation': True, 'search_default_current': 1}</field>
+        <field name="search_view_id" ref="relationship_search"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'sequence': 0, 'view_mode': 'list', 'view_id': ref('relation_list')}), (0, 0, {'sequence': 1, 'view_mode': 'form', 'view_id': ref('relation_form')})]"/>
+    </record>
+    <record id="relationship_type_list" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.type.list</field>
+        <field name="model">personal.crm.relationship.type</field>
+        <field name="arch" type="xml"><list><field name="name"/><field name="left_label"/><field name="right_label"/><field name="is_symmetric"/><field name="allow_self"/></list></field>
+    </record>
+    <record id="relationship_type_form" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.type.form</field>
+        <field name="model">personal.crm.relationship.type</field>
+        <field name="arch" type="xml">
+            <form string="Relationship type"><sheet>
+                <group><field name="name"/><field name="is_symmetric"/></group>
+                <group>
+                    <group string="First role">
+                        <field name="left_label"/><field name="left_label_male"/><field name="left_label_female"/>
+                        <field name="left_partner_type"/><field name="left_partner_category_id"/>
+                    </group>
+                    <group string="Second role" invisible="is_symmetric">
+                        <field name="right_label"/><field name="right_label_male"/><field name="right_label_female"/>
+                        <field name="right_partner_type"/><field name="right_partner_category_id"/>
+                    </group>
+                </group>
+                <group><field name="allow_self"/><field name="handle_invalid_onchange"/></group>
+            </sheet></form>
+        </field>
+    </record>
+    <record id="relationship_type_search" model="ir.ui.view">
+        <field name="inherit_id" eval="False"/>
+        <field name="name">personal_crm.relationship.type.search</field>
+        <field name="model">personal.crm.relationship.type</field>
+        <field name="arch" type="xml"><search><field name="name"/><field name="left_label"/><field name="right_label"/><filter name="symmetric" string="Symmetric" domain="[('is_symmetric', '=', True)]"/></search></field>
+    </record>
+    <record id="action_relationship_types" model="ir.actions.act_window">
+        <field name="name">Relationship types</field><field name="res_model">personal.crm.relationship.type</field>
+        <field name="view_mode">list,form</field><field name="search_view_id" ref="relationship_type_search"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('relationship_type_list')}), (0, 0, {'view_mode': 'form', 'view_id': ref('relationship_type_form')})]"/>
+    </record>
+    <record id="network_editor_form" model="ir.ui.view">
+        <field name="name">personal_crm.network.editor.form</field>
+        <field name="model">personal.crm.relationship</field>
+        <field name="inherit_id" ref="relation_form"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reverse_roles']" position="replace">
+                <field name="reverse_roles" invisible="1" force_save="1"/>
+                <field name="network_orientation" widget="radio" invisible="type_is_symmetric" force_save="1"/>
+                <field name="network_guidance" readonly="1" nolabel="1"/>
+            </xpath>
+            <xpath expr="//field[@name='type_id']" position="attributes"><attribute name="domain">[]</attribute><attribute name="options">{'no_create': True}</attribute></xpath>
+            <xpath expr="//field[@name='left_partner_id']" position="attributes"><attribute name="domain">[]</attribute><attribute name="options">{'no_create': True}</attribute></xpath>
+            <xpath expr="//field[@name='right_partner_id']" position="attributes"><attribute name="domain">[]</attribute><attribute name="options">{'no_create': True}</attribute></xpath>
+        </field>
+    </record>
+</odoo>

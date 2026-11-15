@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright (c) 2026 Martin Melmuk. All rights reserved.
+     This icon is excluded from the repository LGPL-3.0 license. -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="layer1"><g
+       id="pim-06"
+       transform="matrix(0.44206929,0,0,0.44206929,-145.8367,-149.37325)"><rect
+         x="399"
+         y="373"
+         width="129"
+         height="162"
+         rx="14"
+         fill="#ffb51e"
+         id="rect26"
+         style="fill:#f78613;fill-opacity:1" /><rect
+         x="374"
+         y="355"
+         width="132"
+         height="192"
+         rx="17"
+         fill="#0766c9"
+         id="rect27"
+         style="fill:#088bf5;fill-opacity:1" /><rect
+         x="374"
+         y="355"
+         width="31"
+         height="192"
+         rx="13"
+         fill="#0759a5"
+         id="rect28"
+         style="fill:#144496;fill-opacity:1" /><circle
+         cx="453"
+         cy="438"
+         r="23"
+         fill="#ffffff"
+         id="circle28" /><path
+         d="m 412.5,514 v -18.9 c 0,-15.3 18.63,-26.1 40.5,-26.1 21.87,0 40.5,10.8 40.5,26.1 V 514 Z"
+         fill="#ffffff"
+         id="path28" /><g
+         id="g37"
+         style="stroke-width:0.999843;stroke-dasharray:none"><rect
+           x="358"
+           y="387"
+           width="38"
+           height="23"
+           rx="11.5"
+           fill="#10b9ad"
+           id="rect29"
+           style="fill:#1ad3bb;fill-opacity:1;stroke-width:0.999843;stroke-dasharray:none" /><rect
+           x="358"
+           y="433"
+           width="38"
+           height="23"
+           rx="11.5"
+           fill="#10b9ad"
+           id="rect30"
+           style="fill:#1ad3bb;fill-opacity:1;stroke-width:0.999843;stroke-dasharray:none" /><rect
+           x="358"
+           y="481"
+           width="38"
+           height="23"
+           rx="11.5"
+           fill="#10b9ad"
+           id="rect31"
+           style="fill:#1ad3bb;fill-opacity:1;stroke-width:0.999843;stroke-dasharray:none" /></g></g></g></svg>

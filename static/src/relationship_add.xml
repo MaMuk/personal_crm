@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="personal_crm.AddRelationshipsAction">
+        <div class="o_pcrm_add_action p-3"><AddRelationships anchorId="this.props.action.params?.anchorId" otherId="this.props.action.params?.otherId" onClose.bind="this.close"/></div>
+    </t>
+    <t t-name="personal_crm.AddRelationships">
+        <Dialog t-if="this.props.close" title="this.dialogTitle" size="'lg'">
+            <t t-call="personal_crm.AddRelationshipsFields"/>
+            <t t-set-slot="footer"><button type="button" class="btn btn-primary" t-on-click="this.save" t-att-disabled="!this.valid"><t t-out="this.addButtonLabel"/></button><button type="button" class="btn btn-secondary" t-on-click="this.close">Cancel</button></t>
+        </Dialog>
+        <div t-else="" class="card mx-auto" style="max-width: 800px"><div class="card-body">
+            <h3>Add relationships</h3><t t-call="personal_crm.AddRelationshipsFields"/>
+            <button type="button" class="btn btn-primary me-2" t-on-click="this.save" t-att-disabled="!this.valid"><t t-out="this.addButtonLabel"/></button>
+            <button type="button" class="btn btn-secondary" t-on-click="this.close">Cancel</button>
+        </div></div>
+    </t>
+    <t t-name="personal_crm.AddRelationshipsFields">
+        <div class="mb-3"><label class="form-label">Contact</label><div t-if="this.s.anchor" class="form-control bg-body-tertiary" t-out="this.s.anchor.name"/><div t-else="" class="text-muted">Search for the first contact below.</div></div>
+        <div class="mb-3"><label class="form-label" for="pcrm_add_type">Relationship</label><select id="pcrm_add_type" class="form-select" t-on-change="this.changeType" t-att-value="this.s.typeId || ''"><option value="">Choose a relationship</option><option t-foreach="this.s.types" t-as="kind" t-key="kind.id" t-att-value="kind.id" t-out="kind.name"/></select></div>
+        <div t-if="this.type &amp;&amp; !this.type.is_symmetric" class="mb-3"><label class="form-label" for="pcrm_add_role">Contact's role</label><select id="pcrm_add_role" class="form-select" t-on-change="this.changeRole" t-att-value="this.s.role"><option value="left"><t t-out="this.s.anchor?.name || this.contactLabel"/> is the <t t-out="this.type.left_label"/></option><option value="right"><t t-out="this.s.anchor?.name || this.contactLabel"/> is the <t t-out="this.type.right_label"/></option></select></div>
+        <div class="mb-3"><label class="form-label" for="pcrm_add_search"><t t-out="this.s.anchor ? this.addContactsLabel : this.findContactLabel"/></label><input id="pcrm_add_search" class="form-control" type="search" placeholder="Type at least two letters" t-att-value="this.s.query" t-on-input="this.search"/><div t-if="this.s.results.length" class="list-group"><button t-foreach="this.s.results" t-as="person" t-key="person.id" type="button" class="list-group-item list-group-item-action" t-on-click="() => this.add(person)" t-out="person.name"/></div></div>
+        <div t-if="this.s.people.length" class="mb-3"><strong>Selected contacts</strong><div t-foreach="this.s.people" t-as="person" t-key="person.id" class="border rounded p-2 my-1 d-flex justify-content-between gap-2"><div><strong t-out="person.name"/><span t-if="this.row(person.id).anchor_label" class="ms-2 text-muted">· <t t-out="this.s.anchor.name"/> (<t t-out="this.row(person.id).anchor_label"/>) → <t t-out="person.name"/> (<t t-out="this.row(person.id).other_label"/>)</span><div t-if="this.row(person.id).error" class="text-danger" t-out="this.row(person.id).error"/></div><button type="button" class="btn btn-sm btn-light" t-on-click="() => this.remove(person.id)">Remove</button></div></div>
+        <details class="mb-3"><summary>Dates (optional)</summary><div class="row mt-2"><div class="col-sm-6"><label class="form-label">From<input type="date" class="form-control" t-att-value="this.s.start" t-on-change="ev => { this.s.start = ev.target.value; this.preview(); }"/></label></div><div class="col-sm-6"><label class="form-label">Until<input type="date" class="form-control" t-att-value="this.s.end" t-on-change="ev => { this.s.end = ev.target.value; this.preview(); }"/></label></div></div></details>
+        <p t-if="this.s.error" class="alert alert-danger" role="alert" t-out="this.s.error"/>
+    </t>
+</templates>

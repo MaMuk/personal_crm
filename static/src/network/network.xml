@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="personal_crm.NetworkEditorButtons">
+        <button type="button" class="btn btn-primary" t-on-click="() => this.saveButtonClicked()">Save relationship</button>
+        <button type="button" class="btn btn-secondary" t-on-click="this.discard">Cancel</button>
+    </t>
+    <t t-name="personal_crm.EndRelationshipDialog">
+        <Dialog title="this.title">
+            <p>The end date is inclusive.</p>
+            <label>End date <input type="date" class="form-control" t-att-value="this.s.date" t-on-input="ev => { this.s.date = ev.target.value; }"/></label>
+            <p t-if="this.s.error" class="alert alert-danger" role="alert" t-out="this.s.error"/>
+            <t t-set-slot="footer">
+                <button type="button" class="btn btn-primary" t-on-click="this.save" t-att-disabled="this.s.busy">Save end date</button>
+                <button type="button" class="btn btn-secondary" t-on-click="this.props.close" t-att-disabled="this.s.busy">Cancel</button>
+            </t>
+        </Dialog>
+    </t>
+    <t t-name="personal_crm.EmbeddedNetwork">
+        <RelationshipNetwork t-if="this.props.record.resId" t-key="this.props.record.resId" partnerId="this.props.record.resId" embedded="true"/>
+        <p t-else="" class="text-muted p-3">Save this contact to explore and build its network.</p>
+    </t>
+    <t t-name="personal_crm.NetworkAction">
+        <div class="o_pcrm_network_action h-100 overflow-auto">
+            <RelationshipNetwork partnerId="this.props.action.params.partnerId" initial="this.props.state?.networkJourney || this.props.action.params.initial" startFull="!this.props.state?.networkJourney &amp;&amp; this.props.action.params.full" embedded="false"/>
+        </div>
+    </t>
+    <t t-name="personal_crm.Network">
+        <section class="o_pcrm_network" t-att-class="{'o_pcrm_embedded': this.props.embedded}" aria-label="Relationship network">
+            <header class="pcrm_toolbar">
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <strong>Network · <t t-out="this.focalName"/></strong>
+                    <span class="badge text-bg-light">Current relationships</span>
+                    <button type="button" class="btn btn-sm btn-light" t-on-click="this.back" t-att-disabled="this.s.busy || !this.s.journey.back.length">Back</button>
+                    <button type="button" class="btn btn-sm btn-light" t-on-click="this.forward" t-att-disabled="this.s.busy || !this.s.journey.forward.length">Forward</button>
+                    <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.focus(this.original)" t-att-disabled="this.s.busy || this.current.focal === this.original">Return to original contact</button>
+                    <button type="button" class="btn btn-sm btn-light" t-on-click="this.reset" t-att-disabled="this.s.busy">Reset exploration</button>
+                    <label t-if="!this.props.embedded" class="d-flex align-items-center gap-1">Depth
+                        <select class="form-select form-select-sm w-auto" t-on-change="this.depth" t-att-value="this.current.depth" t-att-disabled="this.s.busy">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+                        </select>
+                    </label>
+                    <button type="button" class="btn btn-sm btn-outline-primary" t-on-click="this.full" t-att-disabled="this.s.busy">Full network</button>
+                    <button t-if="this.props.embedded" type="button" class="btn btn-sm btn-outline-primary" t-on-click="() => this.continue()" t-att-disabled="this.s.busy">Continue in dedicated viewer</button>
+                    <button type="button" class="btn btn-sm btn-primary" t-on-click="() => this.add()" t-att-disabled="this.s.busy">Add relationships</button>
+                    <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.list()">Stored relationships</button>
+                </div>
+                <details class="mt-2">
+                    <summary t-out="this.selectedTypesLabel"/>
+                    <div class="d-flex flex-wrap gap-3 py-2">
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.allTypes(true)" t-att-disabled="this.s.busy">All</button>
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.allTypes(false)" t-att-disabled="this.s.busy">None</button>
+                        <label t-foreach="this.s.graph.types" t-as="kind" t-key="kind.id" class="d-flex gap-1 align-items-center">
+                            <input type="checkbox" t-att-checked="this.current.types?.includes(kind.id)" t-on-change="() => this.toggleType(kind.id)" t-att-disabled="this.s.busy"/>
+                            <t t-out="kind.name"/>
+                        </label>
+                    </div>
+                </details>
+                <div class="pcrm_search mt-2">
+                    <label class="d-flex gap-2 align-items-center">Find contact
+                        <input type="search" class="form-control form-control-sm" placeholder="Search visible and other contacts…" t-att-value="this.s.query" t-on-input="this.search"/>
+                    </label>
+                    <div t-if="this.s.query" class="pcrm_results border rounded bg-body p-2">
+                        <strong>Visible contacts</strong>
+                        <div t-foreach="this.visibleResults" t-as="node" t-key="node.id">
+                            <button type="button" class="btn btn-link btn-sm" t-on-click="() => this.selectVisible(node.id)" t-att-disabled="this.s.busy"><t t-out="node.name"/> · Center view</button>
+                        </div>
+                        <p t-if="!this.visibleResults.length" class="text-muted">No visible matches.</p>
+                        <strong>Other accessible contacts</strong>
+                        <div t-foreach="this.otherResults" t-as="node" t-key="node.id" class="d-flex gap-2 align-items-center">
+                            <span t-out="node.name"/>
+                            <button type="button" class="btn btn-link btn-sm" t-on-click="() => this.focus(node.id)" t-att-disabled="this.s.busy">Focus here</button>
+                            <button type="button" class="btn btn-link btn-sm" t-on-click="() => this.openContact(node.id)">Open contact</button>
+                        </div>
+                        <small t-if="this.s.query.length &lt; 2">Type at least two characters to search other contacts.</small>
+                        <button type="button" class="btn btn-light btn-sm d-block" t-on-click="() => { this.s.query = ''; this.s.results = []; }">Close search</button>
+                    </div>
+                </div>
+            </header>
+            <div t-if="this.s.error" role="alert" class="alert alert-warning m-2"><t t-out="this.s.error"/></div>
+            <div class="pcrm_status px-3 py-2" aria-live="polite">
+                <t t-if="this.s.busy"><span class="oi oi-spin me-2" data-icon="autorenew"/>Loading accessible connections… <button type="button" class="btn btn-sm btn-light" t-on-click="this.cancel">Cancel</button></t>
+                <t t-else=""><t t-out="this.recordCountLabel"/>
+                    <strong t-if="this.s.graph.complete" class="ms-2">Full network complete</strong>
+                    <span t-elif="this.current.scope === 'full'" class="ms-2">Full network exploration · some connections collapsed</span>
+                    <span t-if="this.nodes.length === 1" class="ms-2">No connections are visible under the current filters and expansion choices.</span>
+                </t>
+            </div>
+            <div class="pcrm_workspace" t-att-class="{'pcrm_working': this.s.busy}">
+                <div class="pcrm_graph">
+                    <div class="pcrm_view_controls d-flex flex-wrap gap-1 p-2">
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.zoom(1.2)" aria-label="Zoom in">+</button>
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.zoom(1/1.2)" aria-label="Zoom out">−</button>
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="this.fit">Fit network</button>
+                        <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.center()">Center focal contact</button>
+                        <small class="align-self-center">Click a contact to expand · Drag empty space to pan<t t-if="this.props.embedded"> · Ctrl + scroll to zoom</t></small>
+                    </div>
+                    <svg class="pcrm_canvas" viewBox="0 0 1000 600" role="group" aria-label="Interactive contact network" t-ref="this.canvas"
+                        t-on-pointerdown="this.pointerDown" t-on-pointermove="this.pointerMove" t-on-pointerup="this.pointerUp" t-on-pointercancel="this.pointerUp" t-on-wheel="this.wheel">
+                        <g t-att-transform="this.transform">
+                            <g t-foreach="this.connections" t-as="connection" t-key="connection.key" data-connection="true" role="button" tabindex="0"
+                                t-att-aria-label="this.connectionAriaLabel(connection)"
+                                t-on-click="() => this.selectConnection(connection)" t-on-keydown="(ev) => this.connectionKey(ev, connection)"
+                                t-att-class="{'pcrm_connection_selected': this.connectionSelected(connection)}">
+                                <path t-att-d="connection.path" class="pcrm_edge_hit"/>
+                                <path t-att-d="connection.path" class="pcrm_edge"/>
+                                <text t-if="this.current.viewport.zoom > .65 &amp;&amp; this.s.graph.edges.length &lt; 100" t-att-x="connection.x" t-att-y="connection.y - 7" class="pcrm_edge_label" text-anchor="middle">
+                                    <t t-if="connection.records.length > 1"><t t-out="this.relationshipCountLabel(connection.records.length)"/></t>
+                                    <t t-else=""><t t-out="connection.records[0].leftRole"/><t t-out="connection.records[0].symmetric ? ' ↔ ' : ' → '"/><t t-out="connection.records[0].rightRole"/></t>
+                                </text>
+                                <text t-elif="connection.records.length > 1" t-att-x="connection.x" t-att-y="connection.y" class="pcrm_edge_label" text-anchor="middle" t-out="connection.records.length"/>
+                            </g>
+                            <g t-foreach="this.nodes" t-as="node" t-key="node.id" t-att-data-node="node.id" role="button" tabindex="0"
+                                t-att-transform="'translate(' + this.current.positions[node.id].x + ' ' + this.current.positions[node.id].y + ')'"
+                                t-att-aria-label="this.nodeAriaLabel(node)"
+                                t-att-class="{'pcrm_focal': node.id === this.current.focal, 'pcrm_node_selected': this.nodeSelected(node.id)}"
+                                t-on-click="() => this.expand(node.id)" t-on-keydown="(ev) => this.nodeKey(ev,node.id)" t-on-dragover.prevent="() => {}" t-on-drop="(ev) => this.drop(ev,node.id)">
+                                <rect t-if="node.company" x="-36" y="-36" width="72" height="72" rx="9" class="pcrm_node_circle"/>
+                                <circle t-else="" r="36" class="pcrm_node_circle"/>
+                                <image t-if="this.current.viewport.zoom > .55 &amp;&amp; this.nodes.length &lt; 120" t-att-href="'/web/image/res.partner/' + node.id + '/avatar_128'" x="-23" y="-26" width="46" height="46"/>
+                                <text t-else="" y="8" text-anchor="middle" class="pcrm_initials" t-out="node.name.slice(0,2)"/>
+                                <text y="49" text-anchor="middle" class="pcrm_node_name" t-out="node.name.length > 25 ? node.name.slice(0,24) + '…' : node.name"/>
+                                <text t-if="this.current.viewport.zoom > .65" y="65" text-anchor="middle" class="pcrm_node_state"><t t-out="this.kindLabel(node)"/> · <t t-out="this.stateLabel(node)"/></text>
+                                <text t-if="node.id === this.current.focal" y="-44" text-anchor="middle" class="pcrm_focal_label">★ Focal contact</text>
+                                <foreignObject x="-53" y="-43" width="30" height="30">
+                                    <button xmlns="http://www.w3.org/1999/xhtml" type="button" class="pcrm_connect_handle pcrm_node_action" title="View contact details" t-att-aria-label="this.viewContactDetailsLabel(node)" t-on-click.stop="() => { this.current.selected = {node:node.id}; }">i</button>
+                                </foreignObject>
+                                <foreignObject x="23" y="-43" width="30" height="30">
+                                    <button xmlns="http://www.w3.org/1999/xhtml" type="button" class="pcrm_connect_handle pcrm_node_action" draggable="true" title="Drag to another contact to add a relationship, or click to choose a contact" t-att-aria-label="this.addRelationshipFromLabel(node)" t-on-dragstart="(ev) => this.dragStart(ev,node.id)" t-on-click.stop="() => this.add(node.id)">+</button>
+                                </foreignObject>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <aside t-if="this.s.editor || this.selectedNode || this.selectedRecords.length" class="pcrm_inspector" aria-label="Network details">
+                    <t t-if="this.s.editor">
+                        <h5>Edit relationship</h5>
+                        <View t-key="this.s.editor.key" t-props="this.s.editor.props"/>
+                    </t>
+                    <t t-elif="this.selectedNode">
+                        <t t-set="node" t-value="this.selectedNode"/>
+                        <div class="d-flex align-items-center gap-2"><img t-att-src="'/web/image/res.partner/' + node.id + '/avatar_128'" alt="" width="48" height="48"/><h5 t-out="node.name"/></div>
+                        <p><t t-out="this.kindLabel(node)"/> · <t t-out="this.stateLabel(node)"/></p>
+                        <span t-foreach="node.tags" t-as="tag" t-key="tag_index" class="badge text-bg-light me-1 mb-2" t-out="tag"/>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button type="button" class="btn btn-sm btn-primary" t-on-click="() => this.expand(node.id)">Expand connections</button>
+                            <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.collapse(node.id)">Collapse connections</button>
+                            <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.focus(node.id)">Focus here</button>
+                            <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.center(node.id)">Center view</button>
+                            <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.openContact(node.id)">Open contact</button>
+                            <button type="button" class="btn btn-sm btn-primary" t-on-click="() => this.add(node.id)">Add relationships</button>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <h5>Relationship details</h5>
+                        <t t-if="this.selectedGroup">
+                            <button type="button" class="btn btn-sm btn-light mb-2" t-on-click="() => this.ungroup(this.selectedGroup.pair)"><t t-out="this.regroupLabel"/></button>
+                            <button type="button" class="btn btn-sm btn-primary mb-2" t-on-click="() => this.add(this.selectedGroup.records[0].left,this.selectedGroup.records[0].right)">Add relationships from this pair</button>
+                            <button type="button" class="btn btn-sm btn-light mb-2" t-on-click="() => this.list([this.selectedGroup.records[0].left,this.selectedGroup.records[0].right])">All stored relationships for this pair</button>
+                        </t>
+                        <article t-foreach="this.selectedRecords" t-as="edge" t-key="edge.id" class="border rounded p-2 mb-2">
+                            <button type="button" class="btn btn-link p-0 text-start" t-on-click="() => { this.current.selected = {record:edge.id}; }"><strong t-out="edge.name"/></button>
+                            <p class="mb-1"><t t-out="this.nodeName(edge.left)"/> (<t t-out="edge.leftRole"/>) <t t-out="edge.symmetric ? '↔' : '→'"/> <t t-out="this.nodeName(edge.right)"/> (<t t-out="edge.rightRole"/>)</p>
+                            <p class="text-muted"><t t-out="edge.start || this.openStartLabel"/> – <t t-out="edge.end || this.openEndLabel"/> · <t t-out="this.currentLabel"/></p>
+                            <div t-foreach="edge.notes" t-as="note" t-key="note.id"><button type="button" class="btn btn-link btn-sm" t-on-click="() => this.openNote(note.id)" t-out="note.name"/></div>
+                            <div class="d-flex flex-wrap gap-1">
+                                <button type="button" class="btn btn-sm btn-primary" t-on-click="() => this.edit(edge)">Edit</button>
+                                <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.endRelationship(edge)">End relationship</button>
+                                <button type="button" class="btn btn-sm btn-light" t-on-click="() => this.lifecycle(edge,'archive')">Archive</button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" t-on-click="() => this.lifecycle(edge,'delete')">Delete</button>
+                            </div>
+                        </article>
+                    </t>
+                    <button t-if="!this.s.editor" type="button" class="btn btn-sm btn-light mt-2" t-on-click="() => { this.current.selected=null; }">Close details</button>
+                </aside>
+            </div>
+        </section>
+    </t>
+</templates>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="demo_relationship_friend" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_friend"/>
+            <field name="left_partner_id" ref="person_01"/>
+            <field name="right_partner_id" ref="person_02"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_spouse" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_spouse"/>
+            <field name="left_partner_id" ref="person_02"/>
+            <field name="right_partner_id" ref="person_03"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_partner" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_partner"/>
+            <field name="left_partner_id" ref="person_03"/>
+            <field name="right_partner_id" ref="person_04"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_sibling" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_sibling"/>
+            <field name="left_partner_id" ref="person_04"/>
+            <field name="right_partner_id" ref="person_05"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_parent" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_parent"/>
+            <field name="left_partner_id" ref="person_05"/>
+            <field name="right_partner_id" ref="person_06"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_grandparent" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_grandparent"/>
+            <field name="left_partner_id" ref="person_06"/>
+            <field name="right_partner_id" ref="person_07"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_relationship_employment" model="personal.crm.relationship">
+            <field name="type_id" ref="relationship_type_employment"/>
+            <field name="left_partner_id" ref="person_07"/>
+            <field name="right_partner_id" ref="company_02"/>
+            <field name="date_start">2020-01-01</field>
+        </record>
+        <record id="demo_note" model="personal.crm.note">
+            <field name="name">Fictional library visit</field>
+            <field name="date">2026-01-10</field>
+            <field name="body" type="html">
+                <p>Ada and Basil visited the imaginary library.</p>
+            </field>
+            <field name="partner_ids" eval="[(6, 0, [ref('person_01'), ref('person_02'), ref('company_05')])]"/>
+            <field name="relationship_ids" eval="[(4, ref('demo_relationship_friend'))]"/>
+        </record>
+    </data>
+</odoo>

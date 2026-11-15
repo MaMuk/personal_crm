@@ -1,0 +1,31 @@
+{
+    "name": "Personal CRM",
+    "icon": "/personal_crm/static/description/icon.svg",
+    "version": "20.0.2.0.0",
+    "license": "LGPL-3",
+    "author": "Martin Melmuk",
+    "depends": ["base", "contacts", "web"],
+    "data": [
+        "security/groups.xml",
+        "security/ir.access.csv",
+        "data/relation_types.xml",
+        "views/note.xml",
+        "views/partner.xml",
+        "views/relation.xml",
+        "views/menus.xml",
+    ],
+    "assets": {
+        "web.assets_backend": [
+            "personal_crm/static/src/relationship_add.js",
+            "personal_crm/static/src/relationship_add.xml",
+            "personal_crm/static/src/network/state.js",
+            "personal_crm/static/src/network/network.js",
+            "personal_crm/static/src/network/network.xml",
+            "personal_crm/static/src/network/network.scss",
+        ],
+    },
+    "demo": ["demo/contacts.xml", "demo/relations_notes.xml"],
+    "installable": True,
+    "auto_install": False,
+    "application": True,
+}

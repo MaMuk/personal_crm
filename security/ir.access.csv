@@ -1,0 +1,9 @@
+id,name,model_id,group_id/id,operation,domain
+note_user,Personal CRM notes,personal.crm.note,personal_crm.group_user,crud,
+note_internal,Notes restricted to authorized internal users,personal.crm.note,,crud,"[(1, '=', 1)] if user.has_group('personal_crm.group_user') and not user.share else [(0, '=', 1)]"
+private_contacts,Personal CRM contacts,res.partner,,crud,"[] if user.has_group('personal_crm.group_user') and not user.share else [('personal_crm_contact', '=', False)]"
+private_attachments,Personal CRM attachment privacy,ir.attachment,,crud,"[] if user.has_group('personal_crm.group_user') and not user.share else ['|', ('res_model', 'not in', ['personal.crm.document', 'personal.crm.note']), ('res_id', '=', False)]"
+relationship_type_user,Personal CRM relationship types,personal.crm.relationship.type,personal_crm.group_user,crud,
+relationship_user,Personal CRM relationships,personal.crm.relationship,personal_crm.group_user,crud,
+relationship_type_private,Relationship type privacy,personal.crm.relationship.type,,crud,"[] if user.has_group('personal_crm.group_user') and not user.share else [(0, '=', 1)]"
+relationship_private,Relationship privacy,personal.crm.relationship,,crud,"[('left_partner_id', 'access', 'read'), ('right_partner_id', 'access', 'read')] if user.has_group('personal_crm.group_user') and not user.share else [(0, '=', 1)]"

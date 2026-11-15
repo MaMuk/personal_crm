@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <menuitem id="menu_root" name="Personal CRM" web_icon="personal_crm,static/description/icon.svg" sequence="15" groups="personal_crm.group_user"/>
+    <menuitem id="menu_people" name="People" parent="menu_root" action="action_persons" sequence="10"/>
+    <menuitem id="menu_companies" name="Companies and authorities" parent="menu_root" action="action_companies" sequence="20"/>
+    <menuitem id="menu_notes" name="Notes" parent="menu_root" action="action_notes" sequence="30"/>
+    <menuitem id="menu_relations" name="Relationships" parent="menu_root" action="action_relations" sequence="40"/>
+    <menuitem id="menu_add_relationships" name="Add relationships" parent="menu_root" action="action_add_relationships" sequence="41" active="False"/>
+    <menuitem id="menu_types" name="Relationship types" parent="menu_root" action="action_relationship_types" sequence="60"/>
+</odoo>
